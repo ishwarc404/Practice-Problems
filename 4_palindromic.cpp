@@ -26,9 +26,9 @@ int main()
 {
     int largest = 0;
     int num1, num2;
-    for (int i = 999; i > 100; i--)
+    for (int i = 9999; i > 100; i--)
     {
-        for (int j = 999; j > 100; j--)
+        for (int j = 9999; j > 100; j--)
         {
             // cout<<"YES";
             if (checkpalindrome(i * j))

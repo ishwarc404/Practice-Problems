@@ -10,8 +10,8 @@ def checkpalindrome(number):
 
 
 largest = [0, 0, 0]
-for i in range(999, 100, -1):
-    for j in range(999, 100, -1):
+for i in range(9999, 100, -1):
+    for j in range(9999, 100, -1):
         if(checkpalindrome(i*j)):
             if(i*j > largest[0]):
                 largest = [i*j, i, j]
