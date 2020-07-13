@@ -67,18 +67,47 @@ int main()
 
     cout<<endl;
     cout<< "First element: "<< * vec.begin() << endl; //prints the first element
-    cout << "Last element: " <<* (vec.end()-1) << endl; //prints the last element
+    cout<< "Last element: " << * (vec.end()-1) << endl; //prints the last element
 
 
-   //lets print it in reverse order now
-   //for that we need to sort it in reverse order
-   sort(vec.begin(),vec.end(),f);
+    //lets print it in reverse order now
+    //for that we need to sort it in reverse order
+    sort(vec.begin(),vec.end(),f);
     cout<<"Printing in reverse now using a comparator function: ";
     for(int x : vec)
     {
         cout<<x<<" ";
     }
 
+    cout << endl ;
+
+    //reprintting by iterating through the vector using an iterator
+    cout<<"Printing again using a iterator: ";
+    for(auto it  = vec.begin() ; it != vec.end() ; it ++ )
+    {
+        cout<< *it << " ";
+    }
+
+    cout << endl; 
+
+    //poppping 
+    vec.pop_back();
+    cout<<"Printing after popping: ";
+    for(int x : vec)
+    {
+        cout<<x<<" ";
+    }
+
+    cout<< endl;
+    //general ways to access
+    cout<< "Last element: " << vec.back() << endl ;
+    cout<< "First element: " << vec.front() << endl;
+    cout<< "Number of elements: " << vec.size() << endl;
+
+    //initialising swapping
+    std::vector<int> foo (3,100);   // three ints with a value of 100
+    std::vector<int> bar (5,200);   // five ints with a value of 200
+    foo.swap(bar);
 
 }
 
